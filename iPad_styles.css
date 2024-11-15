@@ -1,0 +1,356 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Container */
+body {
+  font-family: 'Fjord One', serif; /* Fjord를 기본 폰트로 설정 */
+  background-color: #fff;
+}
+h1, h2, h3 {
+  font-family: 'Fjord One', serif; /* 특정 제목에만 Fjord 적용 */
+}
+
+.container {
+  width: 100%;
+  max-width: 2048px; /* iPad Pro dimensions */
+  margin: 0 auto;
+  overflow: hidden; /* Prevent overflow */
+}
+
+/* Logo Section */
+.logo-box {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+/* Main Screen */
+.main-screen {
+  display: flex;
+  height: calc(100vh - 150px); /* 로고 크기를 빼고 화면 전체 높이 계산 */
+  margin-top: -10px; /* 로고와 이미지 사이 간격 줄이기 */
+  margin-bottom: 0; /* 아래쪽 간격 제거 */
+}
+
+.scrolling-section {
+  margin-top: 0; /* 상단 마진 제거 */
+  padding-top: 0; /* 상단 패딩 제거 */
+}
+.image-left {
+  flex: 1; /* Flex 컨테이너 유지 */
+  display: flex; /* 내부 요소를 정렬하기 위해 플렉스 사용 */
+  align-items: flex-start; /* 수직 정렬을 위쪽으로 */
+  justify-content: center; /* 수평 정렬 */
+  padding-top: 0; /* 내부 상단 여백 제거 */
+}
+.recipe-image {
+  width: 300%; /* 이미지의 너비를 컨테이너 대비 90%로 설정 */
+  max-height: 80%; /* 이미지 높이가 컨테이너의 80%를 초과하지 않도록 제한 */
+  object-fit: contain; /* 이미지 비율을 유지하며 축소 또는 확장 (잘리지 않음) */
+  margin: 0 ; /* 이미지가 컨테이너 안에서 중앙 정렬되도록 설정 */
+  padding: 0;
+  display: block; /* 이미지를 블록 요소로 처리하여 줄바꿈 적용 */
+  margin-bottom: 0; /* 하단 마진 제거 */
+}
+
+.text-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+
+.prep-info {
+  text-align: right;
+  font-size: 1.2rem;
+  color: #555;
+  position: absolute; /* 위치를 고정하여 정확히 배치 */
+  top: 10%; /* 사진 위쪽에서 10% 내려오게 설정 */
+  right: 20px; /* 오른쪽에서 약간 떨어지도록 설정 */
+  line-height: 1.5; /* 텍스트 간격 조정 */
+  margin: 0; /* 여백 초기화 */
+  padding: 0; /* 안쪽 여백 초기화 */
+}
+
+.recipe-title {
+  text-align: left;
+  font-size: 3rem;
+  font-weight: bold;
+  color: black;
+  position: absolute; /* 위치를 고정하여 정확히 배치 */
+  bottom: 24%; /* 사진 아래쪽에서 10% 위로 설정 */
+  right: 30px; /* 오른쪽에서 약간 떨어지도록 설정 */
+  line-height: 1.2; /* 텍스트 간격 조정 */
+  margin: 0; /* 여백 초기화 */
+  padding: 0; /* 안쪽 여백 초기화 */
+}
+
+/* Description Section */
+.description {
+  text-align: center; /* 텍스트 중앙 정렬 */
+  margin: -174px auto; /* 위아래 여백 추가 */
+  max-width: 800px; /* 설명 텍스트 최대 너비 */
+  font-size: 1.2rem; /* 폰트 크기 */
+  line-height: 1.8; /* 줄 간격 */
+  color: #555; /* 텍스트 색상 */
+}
+
+/* Scrolling Section */
+.scrolling-section {
+  margin-top: 20px;
+}
+
+.scrolling-image {
+  width: 100%;
+  height: auto;
+    margin-top: 0; /* 상단 마진 제거 */
+}
+
+.split-content {
+  display: flex;
+}
+
+/* Ingredients 섹션 스타일 */
+.ingredients {
+  flex: 1;
+  background-color: #FAF0E6; /* 베이지 배경색 */
+  padding: 20px; /* 내부 여백 */
+  font-size: 1.2rem; /* 글자 크기 */
+  font-family: 'Arial', sans-serif; /* 폰트 */
+  line-height: 1.8; /* 줄 간격 */
+  color: #333; /* 텍스트 색상 */
+}
+
+.ingredients h2 {
+  font-size: 1.8rem; /* 제목 글자 크기 */
+  font-weight: bold; /* 제목 글자 굵게 */
+  margin-bottom: 10px; /* 제목과 리스트 간격 */
+  color: #000; /* 제목 색상 */
+}
+
+.ingredients ul {
+  list-style-type: disc; /* 리스트 앞에 점 표시 */
+  margin-left: 20px; /* 리스트 왼쪽 간격 */
+}
+
+
+/* Instructions 섹션 스타일 */
+.instructions {
+  flex: 1;
+  background-color: #fff; /* 배경색 */
+  padding: 20px; /* 내부 여백 */
+  font-size: 1.2rem; /* 글자 크기 */
+  font-family: 'Arial', sans-serif; /* 폰트 */
+  line-height: 1.8; /* 줄 간격 */
+  color: #333; /* 텍스트 색상 */
+}
+
+.instructions h2 {
+  font-size: 1.8rem; /* 제목 글자 크기 */
+  font-weight: bold; /* 제목 글자 굵게 */
+  margin-bottom: 10px; /* 제목과 리스트 간격 */
+  color: #000; /* 제목 색상 */
+}
+
+.instructions ol {
+  list-style-position: inside; /* 번호가 텍스트 안쪽에 표시되도록 설정 */
+}
+
+
+/* 스핀 버튼 스타일 */
+.spin-box {
+  text-align: center; /* 스핀 버튼 중앙 정렬 */
+}
+
+.scrolling-section {
+  margin-top: 0; /* 사진과 사진 사이의 상단 여백 제거 */
+}
+
+.scrolling-image {
+  width: 100%;
+  height: auto;
+  display: block; /* 이미지 간 불필요한 간격 제거 */
+  margin: 0; /* 이미지 주위 여백 제거 */
+  padding: 0; /* 이미지 주위 패딩 제거 */
+}
+
+/* Ingredients 스타일 */
+.ingredients ul {
+  list-style-type: none; /* 기본 동그라미 제거 */
+  padding: 0;
+}
+
+.ingredients li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.ingredients input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2); /* 체크박스 크기 확대 */
+}
+
+/* Instructions 스타일 */
+.instructions ul {
+  list-style-type: none; /* 숫자 제거 */
+  padding: 0;
+}
+
+.instructions li {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.instruction-item.bold {
+  font-weight: bold;
+  color: #333;
+}
+/* 하얀박스 만큼 여백 만들기*/
+.instructions {
+  padding-bottom: 32px; /* 하단 여백 추가 (하얀 박스 높이만큼) */
+}
+.bottom-box {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 10; /* 다른 콘텐츠 위로 배치 */
+  pointer-events: none; /* 사용자가 스크롤을 방해하지 않도록 */
+    border-top: 2px solid #ddd; /* 상단 경계선 */
+}
+body {
+  padding-bottom: 60px; /* 스크롤 영역 확장 */
+  overflow-x: hidden;
+}
+
+/* Custom Checkbox Styling */
+.ingredients input[type="checkbox"] {
+  appearance: none; /* 기본 브라우저 스타일 제거 */
+  -webkit-appearance: none; /* 웹킷 브라우저 기본 스타일 제거 */
+  width: 20px;
+  height: 20px;
+  border: 0.5px solid #000; /* 검은색 테두리 */
+  background-color: #fff; /* 흰색 배경 */
+  border-radius: 0px; /* 모서리를 살짝 둥글게 */
+  outline: none;
+  cursor: pointer;
+}
+
+.ingredients input[type="checkbox"]:checked {
+  background-color: #fff; /* 체크 시 흰색 배경 유지 */
+  position: relative;
+}
+
+.ingredients input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 0%;
+  left: 35%;
+  width: 6px;
+  height: 12px;
+  border: solid #000; /* 검은색 체크 표시 */
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+
+/* Bottom Box */
+.bottom-box {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white; /* 흰색 배경 */
+  display: flex; /* Flexbox 활성화 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  height: 100px; /* 고정 높이 */
+}
+
+
+.spin-button {
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+/* Popup */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  position: relative; /* 부모 요소로 기준 설정 */
+  background-color: white;
+  padding: 20px;
+  border-radius: 0px;
+  text-align: center;
+  width: 300px; /* 팝업 박스 크기 */
+  max-width: 80%;
+}
+
+.bottom-box {
+  position: fixed; /* 화면 하단 고정 */
+  bottom: 0;
+  left: 0;
+  width: 100%; /* 부모 컨테이너 너비를 화면 전체로 설정 */
+  background-color: white; /* 배경색 */
+  text-align: center; /* 버튼을 가로 방향 가운데 정렬 */
+  padding: 20px 0; /* 위아래 여백 */
+  z-index: 10; /* 다른 요소 위로 올림 */
+}
+
+.spin-button {
+  background-color: transparent; /* 버튼 배경 투명 */
+  border: none; /* 버튼 테두리 제거 */
+  color: black; /* 글자 색상 */
+  font-size: 1.5rem; /* 글자 크기 */
+  cursor: pointer; /* 클릭 가능한 커서 */
+  font-weight: normal; /* 글자 굵게 */
+  text-transform: uppercase; /* 대문자 변환 */
+  position: relative; /* 부모 컨테이너에 대한 위치 */
+  z-index: 11; /* 버튼을 부모 요소 위로 올림 */
+  display: inline-block; /* 버튼을 inline-block으로 설정 */
+  margin: 0 auto; /* 버튼 자체 중앙 정렬 */
+  pointer-events: auto; /* 클릭 가능하게 설정 */
+}
+
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: -1px; /* 팝업 내부 상단 여백 */
+  right: 9px; /* 팝업 내부 오른쪽 여백 */
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  border: none;
+  background: none;
+}

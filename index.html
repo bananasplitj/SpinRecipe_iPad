@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Antonio:wght@100..700&family=Dosis:wght@200..800&family=Fjord+One&family=Homemade+Apple&family=Permanent+Marker&family=Unkempt:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpinRecipe</title>
+  <link rel="stylesheet" href="iPad_styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Logo Section -->
+    <div class="logo-box">
+      <img src="logo.jpg" alt="SpinRecipe Logo" class="logo">
+    </div>
+
+    <!-- Main Screen -->
+    <div class="main-screen">
+      <!-- Left Half: Image -->
+      <div class="image-left">
+        <img src="1.webp" alt="Penne Arrabbiata" class="recipe-image">
+      </div>
+
+      <!-- Right Half: Text -->
+      <div class="text-right">
+        <div class="prep-info">Prep: 10 min | Cook: 20 min</div>
+        <div class="recipe-title">Penne <br> Arrabbiata</div>
+      </div>
+    </div>
+
+  <!-- Description Section -->
+    <div class="description">
+      <p>
+        This, Mario Batali wrote in 2013 in The Times, is one of his late-night favorites.
+        Its uncomplicated nature lends itself to an after-midnight feast. It’s basically pasta
+        with tomato sauce and cheese, but red pepper flakes give the sauce a delicious kick.
+      </p>
+    </div>
+
+    <!-- Scrolling Section -->
+    <div class="scrolling-section">
+      <img src="7.jpg" alt="Dish Image" class="scrolling-image">
+      <div class="split-content">
+        <!-- Ingredients -->
+        <div class="ingredients">
+          <h2>Ingredients</h2>
+          <ul>
+            <li><input type="checkbox" id="ingredient1"> <label for="ingredient1">1 pound penne rigate</label></li>
+            <li><input type="checkbox" id="ingredient2"> <label for="ingredient2">3 Tablespoons olive oil</label></li>
+            <li><input type="checkbox" id="ingredient3"> <label for="ingredient3">3 cloves garlic</label></li>
+            <li><input type="checkbox" id="ingredient4"> <label for="ingredient4">1/4 teaspoon crushed red pepper flakes</label></li>
+            <li><input type="checkbox" id="ingredient5"> <label for="ingredient5">1 28-ounce can whole peeled tomatoes</label></li>
+          </ul>
+        </div>
+        <!-- Instructions -->
+        <div class="instructions">
+          <h2>Instructions</h2>
+          <ul>
+            <li><span class="instruction-item" onclick="toggleBold(this)">1. Cook pasta in a large pot of boiling water until tender.</span></li>
+            <li><span class="instruction-item" onclick="toggleBold(this)">2. Heat olive oil in a skillet, add garlic and red pepper, and cook for 30 seconds.</span></li>
+            <li><span class="instruction-item" onclick="toggleBold(this)">3. Add tomatoes and crush them with a wooden spoon.</span></li>
+            <li><span class="instruction-item" onclick="toggleBold(this)">4. Simmer for 5-10 minutes and remove from heat.</span></li>
+            <li><span class="instruction-item" onclick="toggleBold(this)">5. Mix the pasta with the sauce and serve with cheese and basil.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- White Box with Spin Button -->
+<div class="bottom-box">
+  <button class="spin-button" onclick="showPopup()">SPIN</button>
+</div>
+
+
+<!-- 팝업 -->
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <p>Spinning for a new recipe!</p>
+  </div>
+</div>
+
+  <script src="iPad_script.js"></script>
+</body>
+</html>
